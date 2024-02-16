@@ -56,23 +56,23 @@ class Library:
             print('No books available.')
 
 
-library = Library()
+lib = Library()
 
 while True:
     choice = input('Menu** \n1.List Books \n2.Add Book \n3.Remove Book\n')
 
     if choice == "1":
-        library.list_books()
+        lib.list_books()
     elif choice == "2":
         name = input('Book Name: ')
         author = input('Author Name: ')
         release_date = input('Release Date: ')
         number_of_pages = input('Number of Pages: ')
         book = Book(name, author, release_date, number_of_pages)
-        library.add_book(book)
+        lib.add_book(book)
     elif choice == "3":
         book_name = input('Enter the name of the book to remove: ')
-        library.remove_book(book_name)
+        lib.remove_book(book_name)
     elif choice == "q":
         break
     else:
